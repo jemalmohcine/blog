@@ -1,0 +1,138 @@
+<?php 
+  if (!isset($_SESSION['mail'])) {
+    header("location: connecter.php");
+  }
+  include "menu.php";
+  ?>
+  
+</header>
+
+<main  style="background: #696969; padding-top: 60px;background-image: url('https://s3.envato.com/files/229654390/floor%20background%20shine%20Dumbbell%20weights%20silver.jpg');background-size: cover;">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+         <h1 style="text-align: center;margin-top: 30px;">AJOUTER UN ARTICLE</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-12 col-12" style="margin-top: 20px">
+        <div class="card border border-dark" >
+          <img src="1.jpg" style="opacity: 0.7" class="card-img-top img-fluide" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">JEMAL MOHCINE</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-9 col-md-6 col-sm-12 col-12" style="margin-top: 20px">
+        <form action="ajouter.php" method="post" enctype="multipart/form-data">
+          <div class="form-group">
+            <label for="exampleFormControlInput1">TITRE</label>
+            <input name="titre" type="text" class="form-control" id="exampleFormControlInput1" placeholder="titre">
+          </div>
+          <div class="form-group">
+          <label for="exampleFormControlTextarea1">POST</label>
+          <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+          </div>
+          <br> 
+          <input type="file" name="image" id="fileToUpload">
+          <div class="form-check" style="margin-top: 20px">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="Adhérant" checked>
+              <label class="form-check-label" for="gridRadios1">
+                            Adhérants
+              </label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="Passioné">
+              <label class="form-check-label" for="gridRadios2">
+                            Passionés
+              </label>
+          </div>
+          <div class="form-check">
+                          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="Partenaire">
+              <label class="form-check-label" for="gridRadios2">
+                            Partenaires
+              </label>
+          </div>
+          <input type="submit" name="envoyer" value="envoyer" style="margin-top: 30px">
+          </form>
+          </div>
+          </div>
+          <br>
+          <hr>
+          <div class="row">
+            <div class="col-12">
+               <h1 style="text-align: center;margin-top: 30px;">AJOUTER UN EVENEMENT</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12 col-12" style="margin-top: 20px">
+            </div>
+           
+          
+          <div class="col-lg-9 col-md-6 col-sm-12 col-12" style="margin-top: 20px">
+            <form action="ajouterE.php" method="post" enctype="multipart/form-data" >
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">TITRE</label>
+                    <input name="titreE" type="text" class="form-control" id="exampleFormControlInput1" placeholder="titre">
+                  </div>
+                   <div class="form-group">
+                    <label>Date d'événement</label>
+                    <input name="date" type="date" class="form-control">
+                  </div>
+                  <div class="form-group">
+                  <label for="exampleFormControlTextarea1">POST</label>
+                  <textarea name="postE" class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+                  </div>
+                  <br> 
+                  <input type="file" name="imageE" id="fileToUpload">
+                  <div class="form-check" style="margin-top: 20px">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="Adhérant" checked>
+                    <label class="form-check-label" for="gridRadios1">
+                                  Adhérants
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="Passioné">
+                    <label class="form-check-label" for="gridRadios2">
+                                  Passionés
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="Partenaire">
+                    <label class="form-check-label" for="gridRadios2">
+                                  Partenaires
+                    </label>
+                  </div>
+                  <input type="submit" name="envoyerE" value="envoyer" style="margin-top: 30px">
+                </form>
+          </div>
+          </div>
+
+
+      </div>
+
+    </div> 
+  </div>
+ <br>
+ <br>
+
+
+</main>
+<?php include'footer.php';  ?>
+<!--Main Layout-->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+</body>
+
+</html>

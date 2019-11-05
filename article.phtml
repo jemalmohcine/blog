@@ -1,0 +1,59 @@
+<?php 
+  session_start();
+  include "menu.php"; 
+?>
+<div class="container">
+ <div class="row">
+          <?php
+          $id=$_GET['idd'];
+          $sql = "SELECT idd,titre,description, image,categorie FROM blogpost WHERE idd=$id";
+          echo $sql;
+          $result = mysqli_query($conn, $sql);
+          if (mysqli_num_rows($result) > 0) {
+          while($row = mysqli_fetch_assoc($result)) {
+          ?>  
+
+          <div class="col-12">
+            <div class="card" >
+              <div style="height: 150px; background-size: cover; background-image: url('<?php echo $row["image"]; ?>')" class="card-img-top img-fluide" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title"> <?php echo $row["titre"]; ?></h5>
+                <p class="card-text"><?php echo $row["description"]; ?></p>
+                <p class="card-text"><?php echo $row["categorie"]; ?></p>
+
+                
+              </div>
+            </div>
+          </div>
+          <?php
+
+            }
+            }
+          ?>
+          
+
+        </div>  
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+</div>
+</main>
+<?php include'footer.php';  ?>
+
+
+<!--Main Layout-->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+</body>
+
+</html>

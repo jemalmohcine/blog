@@ -1,0 +1,27 @@
+.view {
+    background: url("https://i2.wp.com/cdn.activeman.com/wp-content/uploads/2017/07/11143827/shutterstock_1447283801.jpg?fit=1140%2C596&ssl=1")no-repeat center center;
+    background-size: cover;
+}
+@media (min-width: 768px) {
+    .view {
+        overflow: visible;
+        margin-top: -56px;
+    }
+}
+.navbar {
+    z-index: 1;
+}
+
+html,
+body,
+header,
+.view {
+  height: 100%;
+}
+.bouton{
+ 
+}
+nav a {
+	font-family: 'Lobster', cursive;
+	font-size: 30px;
+}
